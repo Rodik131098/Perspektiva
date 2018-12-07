@@ -1,0 +1,182 @@
+.payment{
+  padding-bottom: 40px;
+  margin-top: 60px;
+  &__discr{
+    p{
+      text-align: center;
+      @include exo2-semibold(16px);
+      color: $mainColor;
+    }
+  }
+  &__ways{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 40px;
+  }
+  &__way{
+    margin: 0 auto 25px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 535px;
+    padding: 40px 25px 40px 40px;
+    border: solid 1px #e2e2e2;
+    background-color: #fafafa;
+    &-text{
+      width: 100%;
+      max-width: 330px;
+      a{
+        @include exo2-bold(15px);
+        text-decoration: underline;
+        color: $mainColor;
+      }
+      &>a{
+        display: block;
+        margin-top: 15px;
+      }
+      &>ul{
+        margin-top: 15px;
+        li{
+          margin-bottom: 10px;
+          text-align: left !important;
+          &:before{
+            content: '-';
+            margin-right: 4px;
+          }
+          &:last-child{
+            margin-bottom: 0;
+          }
+        }
+      }
+      p{
+        margin-top: 15px;
+        line-height: 1.5;
+        letter-spacing: -.5px;
+        color: $mainColor;
+      }
+      h5{
+        @include exo2-bold(22px);
+        color: $mainColor;
+      }
+    }
+  }
+  &__form{
+    display: flex;
+    width: calc(100% - 30px);
+    max-width: 440px;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 15px 50px 15px;
+    max-height: 90vh;
+    &-content{
+      max-height: 87.3%;
+      overflow-y: auto;
+    }
+    &-container{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 480px;
+    }
+    h5{
+      @include exo2-bold(22px);
+      color: $mainColor;
+      margin-bottom: 45px;
+    }
+    input[type="text"], select, label{
+      width: 100%;
+      max-width: 340px;
+    }
+    input[type="text"], select{
+      box-sizing: border-box;
+      height: 50px;
+      padding-left: 20px;
+      font-size: 16px;
+    }
+    input[type="text"]{
+      margin-bottom: 9px;
+      border: solid 1px #e5e5e5;
+      &::placeholder{
+        color: #bbbbbb;
+      }
+    }
+    select{
+      appearance: none;
+      outline: none;
+      background: #e4e4e4 url(/img/select-angle.png) 95% center no-repeat;
+      border: none;
+      padding-right: 20px;
+      color: #606060;
+    }
+    label{
+      margin-top: 20px;
+      p{
+        display: inline;
+        font-size: 13px;
+        color: $mainColor;
+        a{
+          text-decoration: underline;
+          color: inherit;
+        }
+      }
+    }
+    &-button{
+      width: 230px;
+      height: 45px;
+      background-color: #ffe400;
+      margin-top: 35px;
+      font-size: 18px;
+      color: $dark;
+      &:hover{
+        background-color: $secondColorLight;
+      }
+      &:active{
+        background-color: $secondColor;
+      }
+    }
+  }
+  @include mq(1150px, max){
+    &__way{
+      flex-direction: column;
+      max-width: 350px;
+      height: auto;
+      align-items: center;
+      padding-left: 20px;
+      padding-right: 20px;
+      &-text{
+        text-align: center;
+        margin-top: 20px;
+      }
+    }
+  }
+  @include mq(780px, max){
+    &__ways{
+      flex-direction: column;
+    }
+  }
+  @include mq(400px, max){
+    &__form{
+      padding-top: 20px;
+      padding-bottom: 20px;
+      height: auto;
+      &-container{
+        height: 350px;
+      }
+      h5{
+        margin-bottom: 20px;
+      }
+      input[type="text"], select{
+        font-size: 13px;
+        height: 30px;
+      }
+      &-button{
+        height: 35px;
+        width: 170px;
+        font-size: 14px;
+      }
+    }
+  }
+
+}

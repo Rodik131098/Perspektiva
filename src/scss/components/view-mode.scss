@@ -1,0 +1,38 @@
+.view-mode{
+  display: flex;
+  justify-content: flex-end;
+  align-self: flex-end;
+  margin-top: 30px;
+  form{
+    display: flex;
+    align-items: center;
+    p{
+      margin-right: 10px;
+      font-size: 14px;
+      color: $mainColor;
+    }
+    select{
+      background-color: #f6f6f6;
+      border: none;
+      outline: none;
+      color: #616161;
+      font-size: 13px;
+      height: 25px;
+      width: 130px;
+      padding-left: 15px;
+      cursor: pointer;
+      option{
+        outline: none;
+        border: solid 1px $dark;
+      }
+    }
+  }
+  &_number{
+    margin-top: 50px;
+    form{
+      select{
+        width: 65px;
+      }
+    }
+  }
+}

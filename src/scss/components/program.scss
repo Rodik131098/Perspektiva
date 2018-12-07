@@ -1,0 +1,161 @@
+.program{
+  margin-top: 40px;
+  padding-bottom: 60px;
+  &__content{
+    display: flex;
+  }
+  &__preview{
+    display: inline;
+    p{
+      text-align: center;
+      margin-top: 40px;
+      @include exo2-medium(20px);
+      color: $mainColor;
+    }
+  }
+    &__img{
+      width: 100%;
+      max-width: 372px;
+    }
+  &__inf{
+    width: 100%;
+    max-width: 713px;
+    margin-left: 25px;
+  }
+    &__text{
+      display: inline;
+      h1{
+        @include exo2-bold(28px);
+        color: $mainColor;
+      }
+      p{
+        font-size: 15px;
+        color: $mainColor;
+        padding-top: 20px;
+        line-height: 1.7;
+      }
+      a{
+        display: inline-block;
+        @include exo2-medium(20px);
+        border-bottom: solid 1px $mainColor;
+        color: $mainColor;
+        margin-top: 15px;
+      }
+    }
+  &__stock{
+    display: flex;
+    width: 100%;
+    background-color: $lightGray;
+    margin-top: 35px;
+    &-inf{
+      padding: 35px 0 35px 30px;
+      h3{
+        @include exo2-medium(25px);
+        color: $mainColor;
+      }
+      p{
+        font-size: 15px;
+        color: $mainColor;
+        line-height: 1.5;
+      }
+    }
+    &-price{
+      width: 100%;
+      max-width: 295px;
+      background-image: url(../img/stock-price-bg.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      padding: 60px 15px 60px 90px;
+      p, strike{
+        text-align: right;
+        color: $dark;
+      }
+      strike{
+        display: block;
+        font-size: 18px;
+      }
+      p{
+        @include exo2-medium(27px);
+        margin-top: 10px;
+      }
+    }
+  }
+  &__documents{
+    margin-top: 35px;
+    h3{
+      @include exo2-semibold(20px);
+      color: $mainColor;
+    }
+  }
+  &__document{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    p{
+      font-size: 14px;
+      color: $mainColor;
+      border-bottom: solid 1px $mainColor;
+      margin-left: 15px;
+    }
+  }
+  &__actions{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 50px;
+  }
+  &__action{
+    height: 45px;
+    @include exo2-semibold(14px);
+    color: $mainColor;
+    padding: 0 45px;
+    border: solid 2px $mainColorLight;
+    margin: 0 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    &:hover{
+      background-color: $firstColor;
+      border-color: transparent;
+      color: $white;
+    }
+  }
+  @include mq(1050px, max){
+    &__actions{
+      flex-wrap: wrap;
+    }
+    &__action{
+      margin-bottom: 25px;
+      text-align: center;
+    }
+  }
+  @include mq(950px, max){
+    &__content{
+      flex-direction: column;
+      align-items: center;
+    }
+    &__preview{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 25px;
+    }
+    &__inf{
+      margin-left: 0;
+    }
+  }
+  @include mq(670px, max){
+    &__stock{
+      flex-direction: column;
+      &-price{
+        strike, p{
+          text-align: center;
+        }
+        max-width: 100%;
+        background: $secondColorLight;
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+    }
+  }
+}

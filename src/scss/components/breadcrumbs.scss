@@ -1,0 +1,23 @@
+.breadcrumbs{
+  display: inline-block;
+  font-size: 13px;
+  color: $mainColorLight;
+  margin: 0 auto;
+  margin-top: 30px;
+  a{
+    display: inline-block;
+    color: inherit;
+    &:after{
+      content: '>';
+      margin: 0 5px;
+    }
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+  p{
+    display: inline-block;
+    font-size: 13px !important;
+  }
+
+}

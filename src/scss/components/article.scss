@@ -1,0 +1,124 @@
+.article{
+  margin-top: 40px;
+  padding-bottom: 55px;
+  & h2{
+    font-size: 22px;
+    line-height: 1.5;
+    font-weight: 500;
+    color: $mainColor;
+  }
+  & h3{
+    font-size: 20px;
+    line-height: 1.5;
+    font-weight: 500;
+    color: $mainColor;
+  }
+  & h4{
+    font-size: 18px;
+    line-height: 1.5;
+    font-weight: 500;
+    color: $mainColor;
+  }
+  & p{
+    color: $mainColor;
+  }
+  &>p{
+    line-height: 1.5;
+  }
+  table{
+    margin-top: 20px;
+    width: 100%;
+    min-width: 1140px;
+    border-collapse: separate !important;
+    border-spacing: 5px 8px;
+    tr {
+      height: auto !important;
+    }
+    tbody{
+      tr:first-child{
+        td {
+          background-color: $firstColor;
+          color: $white;
+          @include exo2-semibold(14px);
+          
+        }
+      }
+      td{
+        background-color: #e0e0e0;
+        @include exo2-medium(14px);
+        height: auto !important;
+        padding: 15px 10px 15px 10px;
+      }
+    }
+  }
+  td{
+    vertical-align: middle;
+    text-align: center;
+    /*max-width: 215px;*/
+    height: 35px;
+  }
+  &__block{
+    $r: &;
+    display: flex;
+    margin-bottom: 35px;
+    &-img{
+      margin-right: 40px;
+      width: 100%;
+      max-width: 372px;
+    }
+    &-text{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    p{
+      font-size: 15px;
+      color: $mainColor;
+      line-height: 1.5;
+      a{
+        @include exo2-semibold(15px);
+        text-decoration: underline;
+        color: $mainColor;
+      }
+    }
+    &_reverse{
+      #{$r}-img{
+        margin-right: 0;
+        margin-left: 40px;
+      }
+    }
+    &_footnote{
+      border-top: solid 2px $mainColor;
+      border-bottom: solid 2px $mainColor;
+      padding: 10px 0;
+      p{
+        @include exo2-semibold(15px);
+      }
+    }
+  }
+  &__table-container{
+    width: 100%;
+    overflow-x: auto;
+  }
+  &__prop{
+    margin-top: 15px;
+    h5{
+      text-align: right;
+      @include exo2-medium(18px);
+      color: $mainColor;
+    }
+  }
+  @include mq(1000px, max){
+    &__block{
+      flex-direction: column;
+      align-items: center;
+      &-img{
+        margin: 0 0 25px 0 !important;
+
+      }
+      &_reverse{
+        flex-direction: column-reverse;
+      }
+    }
+  }
+}

@@ -1,0 +1,66 @@
+.categories{
+  &__category{
+    &__header{
+      h2{
+        @include exo2-medium(23px);
+        color: $mainColorLight;
+      }
+    }
+  }
+  &__popup{
+    position: absolute;
+    width: calc(100% - 30px);
+    max-width: 700px;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    background-color: #fff;
+    box-shadow: 0 0 49px rgba(0, 0, 0, .21);
+    transition: opacity .3s;
+    padding: 35px 15px 40px 15px;
+    height: 315px;
+    max-height: 80vh;
+    &-container{
+      height: 200px;
+      max-height: 83.5%;
+      overflow-y: auto;
+      margin-top: 15px;
+    }
+    &-content{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+    }
+    h3{
+      @include exo2-bold(24px);
+      color: $mainColor;
+      text-align: center;
+    }
+    p{
+      width: 100%;
+      max-width: 615px;
+      font-size: 14px;
+      line-height: 1.8;
+      color: $mainColor;
+    }
+    &_show{
+      display: flex;
+      opacity: 1;
+    }
+    &-button{
+      display: flex;
+      width: 200px;
+      height: 40px;
+      background-color: $secondColorLight;
+      margin-top: 35px;
+      font-size: 14px;
+    }
+  }
+  @include mq(500px, max){
+    &__popup{
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+}

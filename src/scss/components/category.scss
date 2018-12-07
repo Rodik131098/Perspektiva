@@ -1,0 +1,103 @@
+.category{
+  padding-top: 35px;
+  margin-top: 45px;
+  border-top: solid 1px #e3e3e3;
+  &__header{
+    h2{
+      @include exo2-medium(23px);
+      color: $mainColorLight;
+      margin-left: 20px;
+    }
+  }
+  &__content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 35px;
+  }
+  &__arrow-prev, &__arrow-next{
+    position: absolute;
+    display: none;
+  }
+  &__arrow-prev{
+    left: 15px;
+  }
+  &__arrow-next{
+    right: 15px;
+  }
+  &__themes-list{
+    display: flex;
+  }
+  &__theme{
+    width: 285px;
+  }
+  &__card{
+    width: 245px;
+    margin: 0 auto;
+    &-top{
+      position: relative;
+      width: 100%;
+      height: 145px;
+    }
+    &-img{
+      width: 100%;
+      height: 100%;
+    }
+    &-bot{
+      background-color: $lightGray;
+      padding: 20px 25px;
+      h5{
+        @include exo2-semibold(17px);
+        color: $mainColor;
+      }
+      p{
+        font-size: 13px;
+        color: $mainColorLight;
+        margin-top: 15px;
+      }
+    }
+  }
+  &__stock{
+    position: absolute;
+    bottom: -25px;
+    right: 15px;
+    @include flex-center;
+    width: 58px;
+    height: 58px;
+    border-radius: 100%;
+    background-color: $secondColorLight;
+    box-shadow: 0 0 6px rgba(0, 0, 0, .26);
+    p{
+      @include exo2-medium(14px);
+      color: $dark;
+    }
+  }
+  &__course{
+    position: absolute;
+    right: 0;
+    top: 0;
+    @include flex-center;
+    background-color: $firstColor;
+    width: 100px;
+    height: 30px;
+    p{
+      @include exo2-medium(15px);
+      color: $white;
+    }
+  }
+  .slider-arrow{
+    position: absolute;
+    display: none;
+  }
+
+  @include mq(1270px, max){
+  }
+  @include mq(650px, max){
+    &__header{
+      h2{
+        text-align: center;
+        margin-left: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,163 @@
+.comment{
+  padding: 30px 40px;
+  background-color: #fafafa;
+
+  &__author{
+    display: flex;
+    align-items: center;
+    &-img{
+      border-radius: 100%;
+    }
+    h5{
+      @include exo2-semibold(16px);
+      color: $mainColor;
+      margin-top: 7px;
+    }
+  }
+  &__date{
+    font-size: 11px;
+    color: #8e8e8e;
+  }
+  &__profile{
+    font-size: 12px;
+    color: #76a9b4;
+    margin-top: 7px;
+  }
+  &__text{
+    margin-top: 20px;
+    font-size: 14px;
+    line-height: 1.5;
+    letter-spacing: -0.5px;
+    p {
+      color: $mainColor;
+    }
+  }
+  &__button{
+    width: 150px;
+    height: 30px;
+    background-color: $secondColor;
+    margin-top: 20px;
+    p{
+      font-size: 12px;
+    }
+  }
+  &__popup{
+    width: calc(100% - 30px);
+    max-width: 490px;
+    height: 490px;
+    padding: 30px 40px;
+    max-height: 90vh;
+    &-container{
+
+    }
+    &-text{
+      font-size: 14px;
+      color: $mainColor;
+      line-height: 1.5;
+      height: 310px;
+      max-height: 73%;
+      overflow-y: auto;
+      margin-top: 25px;
+      p{
+        margin-bottom: 25px;
+        &:last-child{
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  &__form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: calc(100% - 30px);
+    max-width: 440px;
+    max-height: 90vh ;
+    padding: 40px 15px;
+    background-color: #fafafa;
+    &-container{
+        height: 482px;
+        max-height: 87.8%;
+        margin-top: 45px;
+        overflow-y: auto;
+        width: 100%;
+        max-width: 340px;
+        input[type="text"], textarea{
+            width: 100%;
+            font-size: 16px;
+            border: solid 1px #e5e5e5;
+            padding-left: 23px;
+            box-sizing: border-box;
+            &::placeholder{
+                color: #bbbbbb;
+            }
+        }
+        input[type="text"]{
+            margin-bottom: 8px;
+            height: 50px;
+        }
+        textarea{
+            font-family: "Exo 2.0";
+            outline: none;
+            resize: none;
+            height: 120px;
+        }
+        label{
+            width: 100%;
+            max-width: 295px;
+            margin-top: 25px;
+            p{
+                font-size: 13px;
+                display: inline;
+                color: $mainColor;
+                letter-spacing: -.5px;
+            }
+        }
+    }
+    h5{
+      @include exo2-bold(22px);
+      color: $mainColor;
+      text-align: center;
+    }
+    form{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 482px;
+    }
+    &-download-photo, &-button{
+      width: 233px;
+    }
+    &-download-photo{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 27px;
+      div {
+        display: none;
+      }
+      p{
+        font-size: 13px;
+        color: $mainColor;
+      }
+    }
+    &-button{
+        font-family: "Exo 2.0";
+        font-size: 16px;
+      margin: 42px auto 0 auto;
+      height: 45px;
+      background-color: $secondColorLight;
+      border: none;
+        outline: none;
+      &:active{
+        background-color: $secondColor;
+      }
+    }
+  }
+  @include mq(360px, max){
+    &__popup{
+      padding: 30px 15px;
+    }
+  }
+}

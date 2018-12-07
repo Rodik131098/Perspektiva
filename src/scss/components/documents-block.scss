@@ -1,0 +1,36 @@
+.documents-block{
+  margin-top: 50px;
+  ul{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    list-style: none;
+    & > li{
+      width: 100%;
+      max-width: 250px;
+      margin: 0 20px 120px;
+      & > a{
+        display: block;
+        width: 100%;
+      }
+      & img{
+        width: 100%;
+      }
+      & h3{
+        @include exo2-bold(14px);
+        color: $mainColor;
+        margin-top: 20px;
+      }
+    }
+  }
+  @include mq(700px, max){
+    ul{
+      flex-direction: column;
+      align-items: center;
+      & > li{
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
+  }
+}

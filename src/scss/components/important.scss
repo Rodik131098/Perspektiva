@@ -1,0 +1,21 @@
+.important{
+  width: 100%;
+  padding: 50px 15px;
+  h2{
+    @include exo2-bold(28px);
+    text-align: center;
+    color: $mainColor;
+  }
+  h4{
+    @include exo2-medium(17px);
+    text-align: center;
+    color: $mainColorLight;
+    margin-top: 10px;
+  }
+  .cards{
+    margin-top: 50px;
+  }
+  .news{
+    margin-top: 50px;
+  }
+}

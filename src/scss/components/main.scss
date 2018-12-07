@@ -1,0 +1,52 @@
+.main{
+  &__header{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    h1, p{
+      text-align: center;
+
+    }
+    h1{
+      @include exo2-bold(28px);
+      color: $mainColor;
+      margin-top: 20px;
+    }
+    >p{
+      @include exo2-medium(17px);
+      color: $mainColorLight;
+      margin-top: 10px;
+    }
+    &-top{
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 30px;
+      .empty-for-centering{
+        flex-basis: 200px;
+      }
+      .breadcrumbs{
+        margin-top: 0;
+
+      }
+    }
+  }
+  &__back-link{
+    display: flex;
+    flex-grow: 1;
+    a{
+      display: flex;
+      color: $mainColor;
+      i{
+        margin-right: 10px;
+      }
+      p{
+        /*border-bottom: solid 1px $mainColor;*/
+        text-decoration: underline;
+        font-size: 13px;
+        color: #3a4b5a;
+      }
+    }
+  }
+}

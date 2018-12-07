@@ -1,0 +1,92 @@
+.footer{
+  &__nav{
+    margin-top: 0;
+  }
+  &__inform{
+    display: flex;
+    flex-direction: column;
+    background-color: $mainColor;
+  }
+  &__contacts{
+    color: $white;
+    p{
+      color: $white;
+    }
+    i:hover {
+      color: $secondColor;
+    }
+
+  }
+  &__license{
+    padding-left: 25px;
+    margin-left: 25px;
+    border-left: solid 1px $mainColorLight;
+    p{
+      @include montserrat(10px);
+      color: $white;
+      line-height: 1.5;
+    }
+  }
+  &__company{
+    display: flex;
+    align-items: center;
+  }
+  &__middle{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 35px 0;
+  }
+  .contacts__social{
+    color: $white;
+  }
+  &__copyright{
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    border-top: solid 1px $mainColorLight;
+    p{
+      text-align: center;
+      @include montserrat(10px);
+      color: $mainColorLight;
+      padding: 25px 0;
+    }
+  }
+  @include mq(1000px, max){
+    &__nav{
+      display: none;
+    }
+    &__middle{
+      flex-direction: column;
+    }
+    &__company{
+      margin-bottom: 25px;
+    }
+  }
+  @include mq(600px, max){
+    &__contacts{
+      flex-direction: column;
+      .contacts{
+        &__contact, &__social{
+          margin-left: 0;
+        }
+        &__contact{
+          margin-bottom: 25px;
+        }
+      }
+    }
+  }
+  @include mq(450px, max){
+    &__company{
+      display: flex;
+      flex-direction: column;
+    }
+    &__license{
+      border-left: none;
+      margin-left: 0;
+      padding-left: 0;
+      text-align: center;
+      margin-top: 25px;
+    }
+  }
+}

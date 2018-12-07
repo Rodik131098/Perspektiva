@@ -1,0 +1,143 @@
+.nav{
+  $r: &;
+  width: 100%;
+  background-color: $mainColor;
+  margin-top: 15px;
+  &__mobile-action-menu{
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 45px;
+    background-color: $mainColor;
+    color: $white;
+    &:hover{
+      cursor: pointer;
+    }
+    i{
+      font-size: 24px;
+    }
+  }
+  &__list{
+    list-style: none;
+    height: 45px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    @include exo2-medium(15px);
+    color: $white;
+  }
+  &__item{
+    height: 100%;
+    color: $white;
+    line-height: 1;
+  }
+  &__link{
+    display: block;
+    height: 100%;
+    color: inherit;
+    padding: 15px 0;
+    &:hover{
+      color: $secondColor;
+    }
+  }
+  &__item_with-submenu{
+    position: relative;
+    &:hover #{$r}__submenu{
+      display: block;
+    }
+  }
+  &__subitem{
+    line-height: 1.5;
+    border-top: solid 1px $mediumGrey;
+    color: $white;
+    &:hover{
+      background-color: $mainColorLight;
+      color: $secondColor;
+    }
+  }
+  &__sublink{
+    display: block;
+    color: inherit;
+    padding: 10px 25px;
+    box-sizing: border-box;
+  }
+  &__submenu{
+    display: none;
+    position: absolute;
+    width: 250px;
+    background-color: $mainColor;
+    left: -25px;
+    z-index: 100;
+    list-style: none;
+    @include exo2-medium(13px);
+    &_big{
+      width: 330px;
+      #{$r}__subitem{
+        line-height: 1;
+      }
+      #{$r}__sublink{
+        padding-top: 12px;
+        padding-bottom: 12px;
+      }
+    }
+  }
+  &_home{
+    background-color: #fafafa;
+    #{$r}__list{
+      color: $grey;
+    }
+    #{$r}__submenu{
+      background-color: #fafafa;
+    }
+    #{$r}__item{
+      color: $mainColor;
+    }
+    #{$r}__subitem{
+      color: $grey;
+      &:hover{
+        background-color: $mainColor;
+        color: $white;
+      }
+    }
+  }
+  @include mq(1000px, max){
+    position: relative;
+    &__mobile-action-menu{
+      display: flex;
+      border-bottom: solid 1px $white;
+      position: relative;
+      z-index: 200;
+    }
+    &__list{
+      position: absolute;
+      flex-direction: column;
+      height: auto;
+      padding: 0;
+      z-index: 100;
+      background-color: $mainColor;
+      transition: all 0.5s;
+      transform: translateY(-100%);
+      &_enter{
+        transform: translateY(0);
+      }
+    }
+
+    &__submenu{
+      display: none !important;
+    }
+    &__item{
+      display: flex;
+      width: 100%;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+    &__link{
+      width: 100%;
+      color: $white;
+      text-align: left;
+      justify-content: flex-start;
+    }
+  }
+}

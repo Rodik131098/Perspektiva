@@ -1,0 +1,78 @@
+.feedback{
+  background-color: $lightGray;
+  border-bottom: solid 2px #c9c9c9;
+  border-top: solid 2px #c9c9c9;
+  padding-top: 55px;
+  padding-bottom: 50px;
+  &__content{
+    display: flex;
+  }
+  &__decor{
+    width: 460px;
+    @include flex-center;
+  }
+  &__form{
+    width: 100%;
+    max-width: 500px;
+    margin-left: 100px;
+    h3{
+      @include exo2-bold(28px);
+      color: $mainColor;
+    }
+    h4{
+      @include exo2-medium(17px);
+      color: $mainColorLight;
+      margin-top: 10px;
+    }
+  }
+  &__input-group{
+    margin-top: 50px;
+  }
+  &__input{
+    width: 240px;
+    height: 45px;
+    border: solid 2px #d0d0d0;
+    outline: none;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    font-size: 17px;
+    padding-left: 20px;
+  }
+  &__agreement{
+    /*display: flex;*/
+    margin-top: 20px;
+    p{
+      display: inline;
+      margin-left: 15px;
+    }
+  }
+  &__button{
+    width: 190px;
+    height: 45px;
+    background-color: $buttonColor;
+    color: $white;
+    text-transform: uppercase;
+    @include exo2-semibold(14px);
+    margin-top: 30px;
+  }
+  @include mq(900px, max){
+    &__content{
+      justify-content: center;
+    }
+    &__decor{
+      display: none;
+    }
+    &__form{
+      margin-left: 0;
+    }
+  }
+  @include mq(520px, max){
+    &__input-group{
+      display: flex;
+      flex-direction: column;
+    }
+    &__input{
+      width: 100%;
+    }
+  }
+}

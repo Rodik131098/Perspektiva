@@ -1,0 +1,38 @@
+.stock-popup{
+	padding: 20px;
+	width: 95%;
+	max-width: 450px;
+	max-height: 80vh;
+	&__content{
+		max-height: 70vh;
+		height: 500px;
+		overflow-y: auto;
+	}
+	&__header{
+		display: flex;
+		flex-direction: column;
+		&-text{
+			margin-top: 20px;
+			h5 {
+				font-weight: bold;
+				font-size: 24px;
+				margin-bottom: 5px;
+			}
+			p{
+				color: #888;
+				font-size: 12px;
+			}
+		}
+		&-img{
+			width: 100%;
+			max-width: 300px;
+			img{
+				width: 100%;
+			}
+		}
+	}
+	&__popup-text{
+		margin-top: 10px;
+		line-height: 1.5;
+	}
+}

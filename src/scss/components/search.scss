@@ -1,0 +1,22 @@
+.search{
+  &__form{
+    display: flex;
+  }
+  &__button{
+    width: 90px;
+    background-color: $secondColor;
+    @include exo2-medium;
+    &:active{
+      background-color: $secondColorDark;
+    }
+  }
+  &__button, &__input{
+    height: 35px;
+  }
+  &__input{
+    width: 200px;
+    box-sizing: border-box;
+    border: solid 1px #888;
+    border-right: none;
+  }
+}

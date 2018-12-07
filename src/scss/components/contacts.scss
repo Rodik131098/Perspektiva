@@ -1,0 +1,31 @@
+.contacts{
+  display: flex;
+  align-items: center;
+  &__contact{
+    display: flex;
+    align-items: center;
+    margin-left: 50px;
+    p{
+      padding-left: 15px;
+      color: $dark;
+    }
+    &:first-child{
+      margin-left: 0;
+    }
+  }
+  &__social{
+    color: $mainColorLight;
+    font-size: 24px;
+    margin-left: 40px;
+    a{
+      color: inherit;
+      margin-left: 20px;
+      &:first-child{
+        margin-left: 0;
+      }
+      &:hover{
+        color: $mainColor;
+      }
+    }
+  }
+}

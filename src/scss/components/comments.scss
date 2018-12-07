@@ -1,0 +1,113 @@
+.comments{
+  display: flex;
+  flex-direction: column;
+  background-size: cover;
+  background-position: center center;
+  padding-bottom: 55px;
+  &__header{
+    h2{
+      text-align: center;
+      @include exo2-bold(28px);
+      color: $white;
+      margin-top: 50px;
+    }
+  }
+  &__content{
+    padding: 0 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  &__comments{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+  }
+  &__comment{
+    position: relative;
+    width: 305px;
+    height: 265px;
+    background-color: $white;
+    margin: 34px auto 0 auto;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    padding: 50px 25px 30px;
+    transition: all 0.3s;
+    &-button{
+      width: 135px;
+      height: 30px;
+      margin: 0 auto;
+      background-color: $secondColor;
+      margin-top: 20px;
+      font-size: 13px;
+      &:hover{
+        background-color: $secondColorDark;
+      }
+    }
+    h5{
+      @include exo2-bold(13px);
+      text-align: center;
+      color: $mainColor;
+    }
+    p{
+      margin-top: 15px;
+      text-align: justify;
+      font-size: 12px;
+      color: $mainColor;
+      text-align-last: center;
+      line-height: 1.5;
+    }
+    &_current{
+      transform: scale(1.4);
+    }
+  }
+  &__ava{
+    position: absolute;
+    top: -34px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 68px;
+    height: 68px;
+    border-radius: 100%;
+  }
+  &__slider-container{
+    max-width: 1140px;
+  }
+  &__arrow-prev, &__arrow-next{
+    color: $white;
+    &:hover{
+      color: $secondColor;
+    }
+  }
+  &__footer{
+    display: inline-block;
+    margin-top: 50px;
+    border-bottom: solid 1px $white;
+    a{
+      color: $white;
+    }
+  }
+  &__slider{
+    height: 420px;
+  }
+  @include mq(1230px, max){
+    &__slider-container{
+      max-width: 427px;
+    }
+  }
+  @include mq(550px, max){
+    &__slider-container{
+      max-width: 290px;
+      margin: 0 auto;
+    }
+    &__arrow-prev, &__arrow-next{
+      display: none;
+    }
+    &__comment{
+      width: 290px;
+      box-sizing: border-box;
+    }
+  }
+}

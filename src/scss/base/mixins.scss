@@ -1,0 +1,65 @@
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin absolute-center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  display: block;
+  transform: translate3d(-50%, -50%,0);
+}
+
+@mixin absolute-vertical-center {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@mixin absolute-horizontal-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@mixin exo2-bold($font-size: 16px){
+  font-size: $font-size;
+  font-weight: bold;
+}
+@mixin exo2-medium($font-size: 16px){
+  font-size: $font-size;
+  font-weight: 500;
+}
+@mixin exo2-light($font-size: 16px){
+  font-size: $font-size;
+  font-weight: 300;
+}
+@mixin exo2-extrabold($font-size: 16px){
+  font-family: 'Exo 2.0 Extra';
+  font-weight: 800;
+  font-size: $font-size;
+}
+@mixin exo2-semibold($font-size: 16px){
+  font-family: 'Exo 2.0 Semi';
+  font-weight: 600;
+  font-size: $font-size;
+}
+@mixin montserrat($font-size: 16px){
+  font-family: 'Montserrat';
+  font-weight: normal;
+  font-size: $font-size;
+}
+@mixin flex-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin mq($width, $type: min) {
+  @media only screen and (#{$type}-width: $width) {
+    @content;
+  }
+}

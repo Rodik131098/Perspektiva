@@ -1,0 +1,78 @@
+$fontPath: '../fonts/';
+
+//font awesome
+@import '../../../node_modules/font-awesome/scss/font-awesome';
+
+//Exo 2
+@font-face {
+  font-family: 'Exo 2.0';
+  src: url('#{$fontPath}Exo20-Regular.eot');
+  src: local('Exo 2.0 Regular'), local('Exo2.0-Regular'),
+  url('#{$fontPath}Exo20-Regular.eot?#iefix') format('embedded-opentype'),
+  url('#{$fontPath}Exo20-Regular.woff') format('woff'),
+  url('#{$fontPath}Exo20-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Exo 2.0';
+  src: url('#{$fontPath}Exo20-Bold.eot');
+  src: local('Exo 2.0 Bold'), local('Exo2.0-Bold'),
+  url('#{$fontPath}Exo20-Bold.eot?#iefix') format('embedded-opentype'),
+  url('#{$fontPath}Exo20-Bold.woff') format('woff'),
+  url('#{$fontPath}Exo20-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Exo 2.0 Extra';
+  src: url('#{$fontPath}Exo20-ExtraBold.eot');
+  src: local('Exo 2.0 Extra Bold'), local('Exo2.0-ExtraBold'),
+  url('#{$fontPath}Exo20-ExtraBold.eot?#iefix') format('embedded-opentype'),
+  url('#{$fontPath}Exo20-ExtraBold.woff') format('woff'),
+  url('#{$fontPath}Exo20-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Exo 2.0';
+  src: url('#{$fontPath}Exo20-Medium.eot');
+  src: local('Exo 2.0 Medium'), local('Exo2.0-Medium'),
+  url('#{$fontPath}Exo20-Medium.eot?#iefix') format('embedded-opentype'),
+  url('#{$fontPath}Exo20-Medium.woff') format('woff'),
+  url('#{$fontPath}Exo20-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Exo 2.0 Semi';
+  src: url('#{$fontPath}Exo20-SemiBold.eot');
+  src: local('Exo 2.0 Semi Bold'), local('Exo2.0-SemiBold'),
+  url('#{$fontPath}Exo20-SemiBold.eot?#iefix') format('embedded-opentype'),
+  url('#{$fontPath}Exo20-SemiBold.woff') format('woff'),
+  url('#{$fontPath}Exo20-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+//montserrat
+@font-face {
+  font-family: 'Montserrat';
+  src: url('#{$fontPath}Montserrat-Regular.eot');
+  src: local('Montserrat Regular'), local('Montserrat-Regular'),
+  url('#{$fontPath}Montserrat-Regular.eot?#iefix') format('embedded-opentype'),
+  url('#{$fontPath}Montserrat-Regular.woff') format('woff'),
+  url('#{$fontPath}Montserrat-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Exo 2.0';
+  src: url('#{$fontPath}Exo20-Light.eot');
+  src: local('Exo 2.0 Light'), local('Exo2.0-Light'),
+  url('#{$fontPath}Exo20-Light.eot?#iefix') format('embedded-opentype'),
+  url('#{$fontPath}Exo20-Light.woff') format('woff'),
+  url('#{$fontPath}Exo20-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}

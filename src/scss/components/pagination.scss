@@ -1,0 +1,48 @@
+.pagination{
+  display: flex;
+  margin-top: 15px;
+  padding-bottom: 55px;
+  &__list{
+    display: flex;
+    justify-content: center;
+    width: 390px;
+    margin: 0 20px;
+  }
+  .wp-pagenavi{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  .current{
+    background-color: $firstColor;
+    color: $white;
+    border-color: transparent;
+  }
+  a, span{
+    @include exo2-semibold(14px);
+    cursor: pointer;
+    @include flex-center;
+    width: 30px;
+    height: 30px;
+    border: 2px solid $mainColorLight;
+    color: $mainColor;
+    margin: 0 5px;
+    &:hover{
+      background-color: $firstColor;
+      color: $white;
+      border-color: transparent;
+    }
+  }
+
+  @include mq(420px, max){
+    &__list{
+      width: 290px;
+      margin: 0;
+    }
+    a, span {
+      width: 24px;
+      height: 24px;
+      font-size: 12px;
+    }
+  }
+}

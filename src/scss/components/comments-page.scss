@@ -1,0 +1,41 @@
+.comments-page{
+  margin-top: 60px;
+  max-width: 1005px;
+  &__header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__view-mode{
+    flex-grow: 1;
+    margin-top: 0;
+    flex-basis: 1px;
+    align-self: center;
+  }
+  &__button{
+    width: 175px;
+    height: 35px;
+    background-color: $firstColor;
+    color: $white;
+  }
+  &__comments-list{
+    margin-top: 45px;
+  }
+  &__comment{
+    margin-bottom: 15px;
+  }
+  @include mq(750px, max){
+    &__header{
+      flex-direction: column;
+    }
+    &__button{
+      margin-bottom: 30px;
+    }
+  }
+  @include mq(400px, max){
+    &__comment{
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+}
